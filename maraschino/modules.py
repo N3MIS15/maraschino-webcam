@@ -669,7 +669,7 @@ AVAILABLE_MODULES = [
 		]
 	},
 	{
-		'name': 'Webcam',
+		'name': 'webcam',
 		'label': 'Webcam',
 		'description': 'Control your webcam from Maraschino',
 		'static': True,
