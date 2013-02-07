@@ -75,7 +75,9 @@ set_alarm = "http://%s:%s/set_alarm.cgi?user=%s&pwd=%s" % (ip, port, username, p
 @app.route('/xhr/webcam')
 @requires_auth
 def rend():
-	return render_template('webcam.html')
+	return render_template('webcam.html',
+		stream_url=stream_url
+	)
 
 @app.route('/xhr/webcam/turn_left') # The route Maraschino uses to run the function (Maraschino load '/xhr/ModuleName' as the modules default location)
 @requires_auth # Use Maraschino's basic Authentication, else someone could have used: http://maraschinoip:port/xhr/Modulname/Function and executed the code without being authorized
